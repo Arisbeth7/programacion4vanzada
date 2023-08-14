@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+
+
+<body>
+    <canvas width="600" height="600" id="mycanvas"></canvas>
+    
+</body>
+
+<script>
+    const canvas = document.getElementById("mycanvas");
+    const ctx = canvas.getContext("2d");
+
+    
+    ctx.strokeStyle = "black";
+    ctx.moveTo(300, 300);
+    ctx.lineTo(500, 480);
+    ctx.stroke();
+
+
+    ctx.fillstyle ='#FFC0CB';
+    ctx.strokeStyle='#FFC0CB';
+    ctx.beginPath();
+  
+    ctx.moveTo(500, 500);
+    ctx.lineTo(350, 380);
+    ctx.lineTo(410, 490);  
+       
+    
+    ctx.stroke();
+    ctx.fill();
+
+</script>
+</html>
