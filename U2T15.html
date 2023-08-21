@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        canvas{
+           background-color: antiquewhite; 
+        }
+        
+    </style>
+
+    <body>
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+
+        <script>
+            var canvas = document.getElementById('myCanvas')
+            var ctx = canvas.getContext('2d');
+            var fig = true;
+            let isDrawing = false;
+
+            var randomColor = getRandomColor();
+            function getNumber(numero){
+                return (Math.random()*numero).toFixed(0);
+            }
+
+            function getRandomColor(){
+                var coolor = "("+getNumber(255)+"," + getNumber(255) + "," + getNumber(255) +")";
+                return "rgb" + coolor;
+            }
+
+            canvas.addEventListener("mouseover", (event) => {});
+            onmousedown = (event) => {
+       
+                if(fig==false){
+                    var randomColor = getRandomColor();
+                    ctx.fillStyle = randomColor;
+
+                    ctx.beginPath();
+                    ctx.arc(event.clientX, event.clientY, 50, 0, 2 * Math.PI)
+                    ctx.fill();  
+                    ctx.closePath(); 
+                }else{
+                    var randomColor = getRandomColor();
+                    ctx.fillStyle = randomColor;
+
+                    ctx.beginPath();
+                    ctx.fillRect (event.clientX-30, event.clientY-25, 50, 50);
+                    ctx.fill();
+                    ctx.closePath();
+                
+                }
+
+            };
+            
+            canvas.addEventListener("mouseout", (event) => {
+                fig= !fig;
+                }
+            );
+            
+            canvas.addEventListener("mousedown", (event) => {
+                x = event.offsetX;
+                y = event.offsetY;
+                isDrawing = true;
+            });
+
+            canvas.addEventListener("mousemove", (event) => {
+                if (isDrawing) {
+                    drawLine(ctx, x, y, event.offsetX, event.offsetY);
+                    x = event.offsetX;
+                    y = event.offsetY;
+                }
+            });
+
+            function drawLine(ctx, x, y) {
+                ctx.beginPath();
+                ctx.arc(x, y, 2, 0, 2 * Math.PI);
+                ctx.fillStyle = "black";
+                ctx.fill();
+                ctx.closePath();
+            }
+
+        </script>
+    </body>
+</html>

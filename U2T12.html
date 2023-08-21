@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        canvas{
+           background-color: antiquewhite; 
+        }
+        
+    </style>
+
+    <body>
+        
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+    
+   
+        <script>
+            var canvas = document.getElementById('myCanvas')
+            var ctx = canvas.getContext('2d');
+        
+        
+            canvas.addEventListener("mousedown", (event) => {});
+            onmousedown = (event) => {
+        
+                ctx.beginPath();
+                ctx.strokeStyle ="black";
+                ctx.fillStyle = '#ff000020';
+                ctx.arc(event.clientX, event.clientY, 50, 0, 2 * Math.PI)
+                ctx.stroke();
+                ctx.fill();
+                
+            };
+        
+        </script>
+    </body>
+
+
+</html>

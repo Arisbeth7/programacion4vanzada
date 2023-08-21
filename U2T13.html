@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <style>
+        canvas{
+           background-color: antiquewhite; 
+        }
+        
+    </style>
+
+    <body>
+        
+        <canvas id="myCanvas" width="500" height="500"></canvas>
+    
+        <script>
+            var canvas = document.getElementById('myCanvas')
+            var ctx = canvas.getContext('2d');        
+        
+            canvas.addEventListener("mouseover", (event) => {});
+            onmousedown = (event) => {
+                
+                var randomColor = getRandomColor();
+                ctx.fillStyle = randomColor;
+
+                ctx.beginPath();
+                ctx.arc(event.clientX, event.clientY, 50, 0, 2 * Math.PI)
+                ctx.fill();  
+            };
+
+            function getNumber(numero){
+                return (Math.random()*numero).toFixed(0);
+            }
+
+            function getRandomColor(){
+                var coolor = "("+getNumber(255)+"," + getNumber(255) + "," + getNumber(255) +")";
+                return "rgb" + coolor;
+            }
+           
+        
+         </script>
+    </body>
+
+
+</html>
