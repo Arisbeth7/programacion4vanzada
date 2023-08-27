@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        canvas{
+           background-color: rgb(130, 186, 208); 
+        }
+    </style>
+
+<body>
+
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script>
+        var canvas = document.getElementById('myCanvas')
+        var ctx = canvas.getContext('2d');
+
+        //casa
+        ctx.beginPath();
+        ctx.fillStyle="rgb(232, 225, 149)";
+        ctx.fillRect (90, 200, 335, 200);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        //techo
+        ctx.strokeStyle="rgb(147, 81, 22)";
+        ctx.fillStyle="rgb(147, 81, 22)";
+        ctx.beginPath();
+        ctx.moveTo(110,100);
+        ctx.lineTo(400,100);
+        ctx.lineTo(450,200);
+        ctx.lineTo(60,200);
+        ctx.fill();
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle = "#aa7444";
+        //marco
+        ctx.fillStyle="rgb(147, 81, 22)";
+        ctx.fillRect (260, 250, 75, 150);
+        //puerta
+        ctx.fillStyle="rgb(230, 126, 34)";
+        ctx.fillRect (268, 260, 60, 140);
+        //chapa
+        ctx.fillStyle="white";
+        ctx.arc( 280, 340, 6, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        //ventana
+        ctx.beginPath();
+        ctx.strokeStyle ="rgb(147, 81, 22)";
+        ctx.fillStyle="rgb(147, 81, 22)";
+        ctx.fillRect (120, 270, 90, 70);
+        //vidrio
+        ctx.fillStyle="rgb(133, 193, 233)";
+        ctx.fillRect (130, 280, 30, 20);
+        ctx.fillRect (130, 310, 30, 20);
+        ctx.fillRect (169, 280, 30, 20);
+        ctx.fillRect (169, 310, 30, 20);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        //ladrillos
+        ctx.beginPath();
+        ctx.fillStyle="rgb(230, 126, 34)";
+        ctx.fillRect (105, 240, 30, 10);
+        ctx.fillRect (115, 228, 30, 10);
+
+        ctx.fillRect (105, 368, 30, 10);
+        ctx.fillRect (115, 380, 30, 10);
+
+        ctx.fillRect (370, 240, 30, 10);
+        ctx.fillRect (390, 270, 30, 10);
+        ctx.fillRect (370, 282, 30, 10);
+        ctx.fillRect (380, 350, 30, 10);
+        ctx.closePath();
+
+        //pasto
+        ctx.beginPath();
+        ctx.fillStyle="rgb(25, 111, 61)";
+        ctx.fillRect (0, 420, 500, 80);
+        ctx.fillStyle="rgba(35, 155, 86)";
+        ctx.fillRect (0, 400, 500, 30);
+        //escaloncito
+        ctx.fillStyle="rgb(147, 81, 22)";
+        ctx.fillRect (253, 400, 90, 30);
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        //arbol
+
+        ctx.fillStyle="rgb(147, 81, 22)";
+        ctx.fillRect (460, 250, 15, 150);
+        ctx.fillStyle="rgba(35, 155, 86)"; 
+        ctx.ellipse( 470, 270, 40, 60, 0, 0, Math.PI*2);
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.fillStyle="rgb(25, 111, 61)";
+        ctx.arc( 90/2, 400, 50, -0.3,  Math.PI,true );
+        ctx.arc( 150/2, 410, 35, -0.3,  Math.PI*1.1,true );
+
+        ctx.fill();
+        ctx.closePath();
+
+
+    </Script>
+
+</body>
+</html>
