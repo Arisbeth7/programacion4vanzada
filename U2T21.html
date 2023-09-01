@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    canvas{
+        background-color:rgb(125, 208, 235); 
+    }
+
+</style>
+<body>
+
+    <canvas id="myCanvas" width="1250" height="1000"></canvas>
+
+    <script>
+        var canvas = document.getElementById('myCanvas')
+        var ctx = canvas.getContext('2d');
+
+        
+      
+        function roundedRect(ctx, x, y, width, height, radius) {
+            ctx.beginPath();
+            ctx.moveTo(x, y + radius);
+            ctx.arcTo(x, y + height, x + radius, y + height, radius);
+            ctx.arcTo(x + width, y + height, x + width, y + height - radius, radius);
+            ctx.arcTo(x + width, y, x + width - radius, y, radius);
+            ctx.arcTo(x, y, x, y + radius, radius);
+            ctx.stroke();
+        }
+
+
+                
+        //azul
+        ctx.beginPath();//sombra negra
+        roundedRect(ctx, 530, 550, 50, 500, 10);
+        ctx.fillStyle="black";
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        roundedRect(ctx, 300, 508, 250, 500, 15);
+        ctx.fillStyle="#ADD8E6";
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();//sombra azul
+        ctx.fillStyle="#0088ff";
+        roundedRect(ctx,540, 514, 10, 385,5);
+        ctx.fill();
+        ctx.closePath();
+
+        //coral
+        ctx.beginPath();//sombra negra
+        roundedRect(ctx, 380, 750, 50, 150, 10);
+        ctx.fillStyle="black";
+        ctx.fill();
+        ctx.closePath();
+        
+        ctx.beginPath();
+        roundedRect(ctx, 200, 698, 200, 200, 15);
+        ctx.fillStyle="#f6c0ad";
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();//sombra naranja
+        ctx.fillStyle="#f29175";
+        roundedRect(ctx,389, 702, 10, 190,5);
+        ctx.fill();
+        ctx.closePath();
+
+        //verde
+        ctx.beginPath();
+        roundedRect(ctx, 1100, 700, 200, 200, 15);
+        ctx.fillStyle="#2ECC71";
+        ctx.fill();
+        ctx.closePath();
+
+        //tubo
+        ctx.beginPath();
+        ctx.fillStyle="#16A085";
+        ctx.fillRect (808, 650, 30, 300);
+        ctx.fillStyle="#0E6655";
+        ctx.fillRect (830, 650, 30, 300);
+        ctx.fillStyle="#1E8449";
+        ctx.fillRect (860, 650, 30, 300);
+        ctx.fillStyle="#239B56";
+        ctx.fillRect (890, 650, 30, 300);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.lineWidth=5;
+        ctx.strokeRect (800, 650, 130, 50);
+        ctx.strokeRect(810, 700, 110, 200);
+        ctx.closePath();
+
+
+        //piso
+        ctx.beginPath();
+        ctx.lineWidth=3;
+        ctx.fillStyle="#794012";
+        ctx.fillRect (30, 920, 1500, 80);
+        ctx.strokeRect (30, 920, 1500, 80);
+
+        ctx.fillStyle="#d16a0c";
+        ctx.fillRect (30, 900, 1500, 40);
+        ctx.strokeRect (30, 900, 1500, 40);
+
+        ctx.beginPath();
+        roundedRect(ctx, 300, 948, 10, 30, 15);
+        ctx.fillStyle="black";
+        ctx.fill();
+
+        //arbol
+        ctx.beginPath();
+        ctx.fillStyle="rgb(25, 111, 61)";
+        ctx.arc( 160/2, 900, 50, -0.3,  Math.PI,true );
+        ctx.arc( 250/2, 910, 35, -0.3,  Math.PI*1.1,true );
+
+        ctx.fill();
+        ctx.closePath();
+
+        //cuadros amarillos
+        ctx.beginPath();
+
+        ctx.fillStyle="#EB984E";
+        ctx.strokeStyle="black";
+        ctx.lineWidth=5;
+
+        ctx.fillRect (100, 450, 70, 70);
+        ctx.fillRect(300, 200, 70, 70);
+        ctx.fillRect(370, 200, 70, 70);
+        ctx.fillRect (1100, 450, 70, 70);
+
+        ctx.strokeRect (100, 450, 70, 70);
+        ctx.strokeRect(300, 200, 70, 70);
+        ctx.strokeRect(370, 200, 70, 70);
+        ctx.strokeRect (1100, 450, 70, 70);
+        ctx.closePath();
+
+        //tornillos
+        ctx.fillStyle="gray";//A
+        ctx.arc( 525, 540, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc( 325, 540, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc( 525, 880, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        //N
+        ctx.beginPath();
+        ctx.arc( 375, 720, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc( 375, 880, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc( 225, 720, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.arc( 225, 880, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        //V
+        ctx.beginPath();
+        ctx.arc( 1125, 720, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+
+        ctx.beginPath();
+        ctx.arc( 1125, 880, 8, 0, 2 * Math.PI );
+        ctx.stroke();
+        ctx.fill();
+        ctx.closePath();
+
+        //tornillos negros
+        ctx.strokeRect (108, 458, 2, 2);
+        ctx.strokeRect (108, 508, 2, 2);
+        ctx.strokeRect (158, 458, 2, 2);
+        ctx.strokeRect (158, 508, 2, 2);
+
+        ctx.strokeRect(308, 210, 2, 2);
+        ctx.strokeRect(308, 260, 2, 2);
+        ctx.strokeRect(358, 210, 2, 2);
+        ctx.strokeRect(358, 260, 2, 2);
+
+        ctx.strokeRect(378, 210, 2, 2);
+        ctx.strokeRect(378, 260, 2, 2);
+        ctx.strokeRect(426, 260, 2, 2);
+        ctx.strokeRect(426, 210, 2, 2);
+
+        ctx.strokeRect (1111, 458, 2, 2);
+        ctx.strokeRect (1111, 508, 2, 2);
+        ctx.strokeRect (1155, 458, 2, 2);
+        ctx.strokeRect (1155, 508, 2, 2);
+    </script>
+
+</body>
+</html>
