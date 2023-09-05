@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+  <style>
+    canvas{
+       background-color:rgb(28, 13, 159); 
+    }
+  </style>
+<body>
+    <canvas id="miCanvas" width="800" height="600"></canvas>
+
+    <script>
+        var canvas = document.getElementById("miCanvas");
+        var ctx = canvas.getContext("2d");
+
+        //piso
+        ctx.beginPath();
+        ctx.lineWidth=3;
+        ctx.fillStyle="#65340C";
+        ctx.fillRect (0, 490, 800, 110);
+
+        ctx.fillStyle="#118919";
+        ctx.fillRect (0, 480, 800, 20);
+        ctx.fillStyle="#0DBA18";
+        ctx.fillRect (0, 460, 800, 20);
+        ctx.fillStyle="#22E32F";
+        ctx.fillRect (0, 440, 800, 20);
+
+        //aros
+        ctx.beginPath();
+        ctx.strokeStyle="#E3C122";
+        ctx.arc(100,400,30,0,Math.PI*2);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#E3C122";
+        ctx.arc(200,400,30,0,Math.PI*2);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#E3C122";
+        ctx.arc(300,400,30,0,Math.PI*2);
+        ctx.stroke();
+
+        //palma
+        ctx.beginPath();
+        ctx.fillStyle="#9C5113";
+        ctx.fillRect(500,100, 20,340);
+        ctx.stroke();
+
+        //hojas
+        //derecha
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(420, 100, 80, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(428, 120, 70, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        //peques
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(360, 80, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(360, 60, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(400, 60, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(400, 115, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(400, 100, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(400, 110, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        //izquierda
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(600, 100, 80, -0.3, Math.PI*1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(592, 120, 70, -0.3, Math.PI*1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        //peques
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(640, 80, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(640, 60, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(600, 80, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(600, 60, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(530, 100, 60, 0, 1*Math.PI,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(480, 90, 60, 0, 1*Math.PI,true);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(530, 110, 60, 0, 1*Math.PI,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(480, 130, 60, 0, 1*Math.PI,true);
+        ctx.stroke();
+        ctx.closePath();
+
+
+        //deizq
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(20, 180, 80, -0.3, Math.PI*1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(20, 190, 70, -0.3, Math.PI*1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(20, 180, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(20, 190, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(60, 180, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(60, 190, 50, 0, Math.PI*1.1,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(20, 200, 70, 0, 1*Math.PI,true);
+        ctx.stroke();
+        ctx.closePath();
+
+        ctx.beginPath();
+        ctx.strokeStyle="#22E32F";
+        ctx.arc(20, 210, 70, 0, 1*Math.PI,true);
+        ctx.stroke();
+        ctx.closePath();
+        
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html> 
